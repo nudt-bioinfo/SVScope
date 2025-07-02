@@ -46,8 +46,8 @@ bash SVScope_detect.sh \
   --bam_path /your_path/your_bam_name.bam  \
   --referenceFasta /your_path/your_fa_name.fa \
   --out_dir /your_output_dir \
-  --prefix /your_sample_name (eg.HG002) \
-  --jobs thread_num(eg.4)
+  --prefix /your_sample_name (e.g. HG002) \
+  --jobs thread_num(e.g. 4)
 ```
 
 ##### [Note: The three SV detection algorithms can also be called separately. If you do not want to use the multi-source integration command provided by SVScope, bash ./SVScope_detect.sh, you can also call the following three tools separately. All commands have been encapsulated, and you can call them directly by passing external parameters. The specific usage is as follows:]
@@ -66,7 +66,7 @@ bash Algorithm1.sh --bam_path /your_path/your_bam_name.bam
 bash Algorithm2.sh --bam_path /your_path/your_bam_name.bam 
 		   --out_dir /your_output_dir
 		   --referenceFasta /your_path/your_fa_name.fa 
-                   --jobs thread_num(eg.4)
+                   --jobs thread_num(e.g. 4)
 ```
 
 ##### For Algorithm3, the call command is:
@@ -74,7 +74,7 @@ bash Algorithm2.sh --bam_path /your_path/your_bam_name.bam
 ```
 bash Algorithm3.sh --bam_path /your_path/your_bam_name.bam 
                    --out_dir /your_output_dir
-                   --prefix /your_sample_name (eg.HG002)
+                   --prefix /your_sample_name (e.g. HG002)
 ```
 
 

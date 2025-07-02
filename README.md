@@ -52,25 +52,25 @@ bash SVScope_detect.sh \
 
 ```
 bash Algorithm1.sh --bam_path /your_path/your_bam_name.bam 
-					--referenceFasta /your_path/your_fa_name.fa
-					--out_dir /your_output_dir
+                   --referenceFasta /your_path/your_fa_name.fa
+                   --out_dir /your_output_dir
 ```
 
 ##### For Algorithm2, the call command is:
 
 ```
 bash Algorithm2.sh --bam_path /your_path/your_bam_name.bam 
-						--out_dir /your_output_dir
-						--referenceFasta /your_path/your_fa_name.fa 
-						--jobs thread_num(eg.4)
+		   --out_dir /your_output_dir
+		   --referenceFasta /your_path/your_fa_name.fa 
+                   --jobs thread_num(eg.4)
 ```
 
 ##### For Algorithm3, the call command is:
 
 ```
 bash Algorithm3.sh --bam_path /your_path/your_bam_name.bam 
-					--out_dir /your_output_dir
-					--prefix /your_sample_name (eg.HG002)
+                   --out_dir /your_output_dir
+                   --prefix /your_sample_name (eg.HG002)
 ```
 
 

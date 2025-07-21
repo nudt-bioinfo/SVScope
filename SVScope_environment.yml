@@ -221,4 +221,4 @@ dependencies:
       - torchviz==0.0.3
       - truvari==3.0.0
       - virtualenv==20.17.1
-prefix: /home/lyl/anaconda3/envs/SVScope_filter
+prefix: /home/anaconda3/envs/SVScope_filter

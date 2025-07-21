@@ -21,7 +21,7 @@ if len(sys.argv) < 2:
 seed_everything(2022)
 
 root_dir = "./"
-vcf_data_dir = "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/merge/"
+vcf_data_dir = "/your_vcf_data_dir/"
 vcf_name = "SVScope_unfiltered"
 
 config = {
@@ -34,7 +34,7 @@ config = {
 }
 
 model = IDENet.load_from_checkpoint(
-    root_dir + "model/" + config['model'] + ".ckpt", path= "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/new_truvari_results/", config=config)
+    root_dir + "model/" + config['model'] + ".ckpt", path= "/your_model_dir/", config=config)
 
 trainer = pl.Trainer(gpus=1)
 

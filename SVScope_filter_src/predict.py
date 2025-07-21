@@ -33,7 +33,7 @@ config = {
 
 
 model = IDENet.load_from_checkpoint(
-    root_dir + "model/" + config['model'] + ".ckpt", path="/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/new_truvari_results/", config=config)
+    root_dir + "model/" + config['model'] + ".ckpt", path="/your_model_path/", config=config)
 
 trainer = pl.Trainer(gpus=1)
 

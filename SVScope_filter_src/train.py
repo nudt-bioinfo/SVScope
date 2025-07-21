@@ -28,7 +28,7 @@ from hyperopt import hp
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 seed_everything(2022)
 
-data_dir = "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/new_truvari_results/"
+data_dir = "/your_data_dir/"
 bs = 64
 # my_label = "resnet50"
 # my_label = "resnet34"
@@ -36,7 +36,7 @@ bs = 64
 # "shufflenet_v2_x1_0"
 my_label = "resnet50"
 
-bam_path = "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/" + "HG002.hs37d5.sorted.bam"
+bam_path = "/your_bam_path/" + "HG002.hs37d5.sorted.bam"
 
 # ins_vcf_filename = data_dir + "pretrain_insert_result_data.csv.vcf"
 # del_vcf_filename = data_dir + "pretrain_delete_result_data.csv.vcf"

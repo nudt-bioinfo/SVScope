@@ -1,7 +1,7 @@
 # SVScope
 Structural variation detection for short reads via multi-source fusion and visual filtering.
 
-[workflow.pdf](https://github.com/user-attachments/files/21339557/workflow.pdf)
+<img width="1108" height="1093" alt="workflow" src="https://github.com/user-attachments/assets/2692fec7-f6cb-44a5-87a0-a7cb8d95978f" />
 
 
 ## Introduction

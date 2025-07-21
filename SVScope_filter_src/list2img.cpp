@@ -20,9 +20,6 @@ float get_rms(vector<float> records)
     }
     return sqrt(power_sum / records.size());
 }
-// """
-// 均方根值 反映的是有效值而不是平均值
-// """
 
 float get_hm(vector<float> records)
 {

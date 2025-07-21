@@ -159,8 +159,7 @@ class IDENet(pl.LightningModule):
 
         self.resnet_model = eval("torchvision.models." + model_name)(pretrained=False)  # [224, 224] -> 1000
 
-        # # 加载本地权重
-        # state_dict = torch.load("/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/new_truvari_results/src/goldtrain_checkpoints_predict/shufflenetv2_x1-5666bf0f80.pth")
+        # state_dict = torch.load("/your_model_path//shufflenetv2_x1-5666bf0f80.pth")
         # self.resnet_model.load_state_dict(state_dict)
 
 
@@ -173,7 +172,7 @@ class IDENet(pl.LightningModule):
         )
 
         # self.criterion = nn.CrossEntropyLoss()
-        self.criterion = FocalLoss()  # 样本不平衡loss
+        self.criterion = FocalLoss()  
 
 # class IDENet(pl.LightningModule):
 #     def __init__(self, path, config):
@@ -193,7 +192,7 @@ class IDENet(pl.LightningModule):
 #         model_name = config["model"]
 #         self.resnet_model = eval("torchvision.models." + model_name)(pretrained=True)
 #         # state_dict = torch.load(
-#         #     "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/new_truvari_results/src/goldtrain_checkpoints_predict/shufflenetv2_x1-5666bf0f80.pth")
+#         #     "/your_model_path//shufflenetv2_x1-5666bf0f80.pth")
 #         # self.resnet_model.load_state_dict(state_dict)
 #
 #

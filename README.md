@@ -1,9 +1,12 @@
 # SVScope
-Structural variation detection for short read via multi-source fusion and multi-channel visual filtering.
+Structural variation detection for short reads via multi-source fusion and visual filtering.
 
 ## Introduction
 
 Structural variations (SVs) are a major source of genomic diversity and are closely associated with human disease. Existing short-read-based SV detection tools often rely on limited alignment features, which restricts their ability to fully capture variation signals. While many multi-source fusion methods have improved recall rates, they also introduce a large number of false positives. To address these issues, we present SVScope, an integrated SV detection tool that fuses multi-source signals, structure-sensitive image encoding, and deep visual filtering. It first consolidates candidate variations derived from complementary alignment signals into a standardized candidate set via a harmonized detection and merging pipeline. To further improve specificity, SVScope encodes alignment features of candidate regions into multi-channel image representations and employs a convolutional neural network with embedded attention mechanisms to filter out false-positive calls. Benchmarking on a real dataset demonstrates that SVScope consistently improves recall compared to individual detection tools while substantially enhancing overall precision through deep learning-based filtering. These results highlight SVScope’s capacity to balance sensitivity and specificity, offering a scalable and robust solution for SV analysis in large-scale short-read sequencing studies.
+
+##### [Note: SVScope is an integrated tool for short-read SV detection that combines multi-source signal fusion, structure-sensitive image encoding, and deep visual filtering. It unifies detection, encoding, and filtering in a streamlined pipeline. It first systematically combines complementary signals including read-pair, read-depth, split-reads, and local assemblies into a harmonized candidate set, improving variation coverage while streamlining multi-source execution and reducing the burden of manual parameter configuration and operations.. Each candidate is then encoded into a seven-channel image based on CIGAR operations and pairing orientations, capturing both fine-grained breakpoints and global structural cues. To enhance specificity, an attention-augmented classification head is built upon pre-trained backbones with minimal fine-tuning, enabling focused learning under weak signal regions. The specific usage is as follows:]
+
 
 ## 1. SVScope channel configuration:
 
@@ -50,7 +53,7 @@ bash SVScope_detect.sh \
   --jobs thread_num(e.g. 4)
 ```
 
-##### [Note: The three SV detection algorithms can also be called separately. If you do not want to use the multi-source integration command provided by SVScope, bash ./SVScope_detect.sh, you can also call the following three tools separately. All commands have been encapsulated, and you can call them directly by passing external parameters. The specific usage is as follows:]
+##### [Note: The three SV detection algorithms can also be called separately. If you do not want to use the multi-source integration command provided by SVScope, bash ./SVScope_detect.sh, you can also call the following three tools separately after you run the script ./SVScope.install.sh . All commands have been encapsulated, and you can call them directly by passing external parameters. The specific usage is as follows:]
 
 ##### For Algorithm1, the call command is:
 

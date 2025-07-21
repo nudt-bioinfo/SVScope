@@ -1,20 +1,20 @@
 import pandas as pd
 import re
 
-data_dir = "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/new_truvari_results/"
+data_dir = "/your_data_dir/"
 
 
-def list_save(filename, data):#filename为写入文件的路径，data为要写入数据列表.
+def list_save(filename, data):
     file = open(filename,'w')
     file.writelines(data)
     file.close()
-    print(filename + "文件保存成功")
+    print(filename + "sucessful")
 
-def set_save(filename, data):#filename为写入文件的路径，data为要写入数据列表.
+def set_save(filename, data):
     file = open(filename,'w')
     file.writelines([line+'\n' for line in data])
     file.close()
-    print(filename + "文件保存成功")
+    print(filename + "sucessful")
 
 insert = ["CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\tFORMAT\tSAMPLE\tSample\tNULL\tNO_CHIP_ID\n"]
 delete = ["CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\tFORMAT\tSAMPLE\tSample\tNULL\tNO_CHIP_ID\n"]

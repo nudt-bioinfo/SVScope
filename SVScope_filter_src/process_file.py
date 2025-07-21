@@ -18,9 +18,9 @@ torch.multiprocessing.set_sharing_strategy('file_system')
 
 seed_everything(2022)
 
-data_dir = "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/new_truvari_results/"
+data_dir = "/your_data_dir/"
 
-bam_path = "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/" + "HG002.hs37d5.sorted.bam"
+bam_path = "/your_bam_path/" + "HG002.hs37d5.sorted.bam"
 
 ins_vcf_filename = data_dir + "insert_result_data.csv.vcf"
 del_vcf_filename = data_dir + "delete_result_data.csv.vcf"
@@ -240,9 +240,7 @@ def create_image(sum_data):
 
 
 def parse_args():
-    """
-    :return:进行参数的解析
-    """
+
     description = "you should add those parameter"
     parser = argparse.ArgumentParser(description=description)
     help = "The path of address"

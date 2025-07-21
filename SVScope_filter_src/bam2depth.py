@@ -4,9 +4,9 @@ from utilities import mymkdir
 
 bam_name = "HG002.hs37d5.sorted.bam"
 output_file = "output.depth.txt"
-data_dir = "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/new_truvari_results/"
+data_dir = "/your_data_dir/"
 
-cmd = "samtools depth " + "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/" + bam_name + " > " + data_dir + output_file
+cmd = "samtools depth " + "/your_bam_path/" + bam_name + " > " + data_dir + output_file
 print(cmd)
 print("==== starting samtools deal ====")
 subprocess.call(cmd, shell = True)

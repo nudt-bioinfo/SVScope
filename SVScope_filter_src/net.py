@@ -152,14 +152,14 @@ class IDENet(pl.LightningModule):
 
         self.path = path
 
-        conv2d_dim = [7, 7, 3, 3] # [4,4,3,3]修改为[7,7,3,3]
+        conv2d_dim = [7, 7, 3, 3] 
         self.conv2ds = conv2ds_sequential(conv2d_dim)
 
         # self.resnet_model = eval("torchvision.models." + model_name)(pretrained=True) # [224, 224] -> 1000
 
         self.resnet_model = eval("torchvision.models." + model_name)(pretrained=False)  # [224, 224] -> 1000
 
-        # state_dict = torch.load("/your_model_path//shufflenetv2_x1-5666bf0f80.pth")
+        # state_dict = torch.load("/your_model_path/shufflenetv2_x1-5666bf0f80.pth")
         # self.resnet_model.load_state_dict(state_dict)
 
 

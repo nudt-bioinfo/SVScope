@@ -35,7 +35,7 @@ def process_chromosome(chr, length, cpu_core):
 # os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 seed_everything(2022)
 
-bam_path = "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/" + "HG002.hs37d5.sorted.bam"
+bam_path = "/your_bam_path/" + "HG002.hs37d5.sorted.bam"
 
 sam_file = pysam.AlignmentFile(bam_path, "rb")
 chr_list = sam_file.references

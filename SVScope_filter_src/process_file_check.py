@@ -24,8 +24,8 @@ from ray.tune.integration.pytorch_lightning import TuneReportCallback, \
 import list2img
 from hyperopt import hp
 
-data_dir = "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/new_truvari_results/"
-bam_path = "/mnt/HHD_16T_1/lyl/data/HG002_GRCh37/" + "HG002.hs37d5.sorted.bam"
+data_dir = "/your_data_dir/"
+bam_path = "/your_bam_path/" + "HG002.hs37d5.sorted.bam"
 
 ins_vcf_filename = data_dir + "insert_result_data.csv.vcf"
 del_vcf_filename = data_dir + "delete_result_data.csv.vcf"

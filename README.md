@@ -1,6 +1,9 @@
 # SVScope
 Structural variation detection for short reads via multi-source fusion and visual filtering.
 
+[workflow.pdf](https://github.com/user-attachments/files/21339557/workflow.pdf)
+
+
 ## Introduction
 
 Structural variations (SVs) are a major source of genomic diversity and are closely associated with human disease. Existing short-read-based SV detection tools often rely on limited alignment features, which restricts their ability to fully capture variation signals. While many multi-source fusion methods have improved recall rates, they also introduce a large number of false positives. To address these issues, we present SVScope, an integrated SV detection tool that fuses multi-source signals, structure-sensitive image encoding, and deep visual filtering. It first consolidates candidate variations derived from complementary alignment signals into a standardized candidate set via a harmonized detection and merging pipeline. To further improve specificity, SVScope encodes alignment features of candidate regions into multi-channel image representations and employs a convolutional neural network with embedded attention mechanisms to filter out false-positive calls. Benchmarking on a real dataset demonstrates that SVScope consistently improves recall compared to individual detection tools while substantially enhancing overall precision through deep learning-based filtering. These results highlight SVScope’s capacity to balance sensitivity and specificity, offering a scalable and robust solution for SV analysis in large-scale short-read sequencing studies.
